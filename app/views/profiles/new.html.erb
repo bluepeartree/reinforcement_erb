@@ -1,4 +1,12 @@
-<label for="email">email</label>
+<% @profile = {email: "", username: "", pin: "", website: "", address: "", alias: "" } %>
+
+<% @profile.each do |key, value| %>
+   <p> <%= label_tag(key) %></p>
+   <p> <%= text_field_tag(value)  %></p>
+ <% end %>
+
+
+<!-- <label for="email">email</label>
 <input type="text" name="email" id="email" class="fancy_form" >
 
 <label for="username">username</label>
@@ -14,4 +22,4 @@
 <input type="text" name="address" id="address" class="fancy_form" >
 
 <label for="alias">alias</label>
-<input type="text" name="alias" id="alias" class="fancy_form" >
+<input type="text" name="alias" id="alias" class="fancy_form" > -->
